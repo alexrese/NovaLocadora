@@ -29,6 +29,11 @@ namespace NovaLocadora
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle10 = new System.Windows.Forms.DataGridViewCellStyle();
             this.dgLocadora = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
             this.tbNome = new System.Windows.Forms.TextBox();
@@ -61,167 +66,210 @@ namespace NovaLocadora
             this.colCategoria,
             this.colDescricao,
             this.colAno});
-            this.dgLocadora.Location = new System.Drawing.Point(12, 153);
+            this.dgLocadora.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dgLocadora.Location = new System.Drawing.Point(12, 142);
             this.dgLocadora.Name = "dgLocadora";
-            this.dgLocadora.Size = new System.Drawing.Size(764, 199);
+            this.dgLocadora.RowTemplate.DefaultCellStyle.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.dgLocadora.Size = new System.Drawing.Size(764, 302);
             this.dgLocadora.TabIndex = 0;
             this.dgLocadora.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgLocadora_CellContentClick);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(127, 24);
+            this.label1.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(80, 21);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.Size = new System.Drawing.Size(51, 19);
             this.label1.TabIndex = 1;
             this.label1.Text = "Nome";
             // 
             // tbNome
             // 
-            this.tbNome.Location = new System.Drawing.Point(168, 21);
+            this.tbNome.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbNome.Location = new System.Drawing.Point(137, 18);
             this.tbNome.Name = "tbNome";
-            this.tbNome.Size = new System.Drawing.Size(100, 20);
+            this.tbNome.Size = new System.Drawing.Size(245, 27);
             this.tbNome.TabIndex = 2;
             // 
             // tbCategoria
             // 
-            this.tbCategoria.Location = new System.Drawing.Point(341, 21);
+            this.tbCategoria.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbCategoria.Location = new System.Drawing.Point(95, 58);
             this.tbCategoria.Name = "tbCategoria";
-            this.tbCategoria.Size = new System.Drawing.Size(100, 20);
+            this.tbCategoria.Size = new System.Drawing.Size(151, 27);
             this.tbCategoria.TabIndex = 4;
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(283, 24);
+            this.label2.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(12, 66);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(52, 13);
+            this.label2.Size = new System.Drawing.Size(77, 19);
             this.label2.TabIndex = 3;
             this.label2.Text = "Categoria";
             // 
             // tbDescricao
             // 
-            this.tbDescricao.Location = new System.Drawing.Point(511, 21);
+            this.tbDescricao.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbDescricao.Location = new System.Drawing.Point(95, 100);
             this.tbDescricao.Name = "tbDescricao";
-            this.tbDescricao.Size = new System.Drawing.Size(100, 20);
+            this.tbDescricao.Size = new System.Drawing.Size(675, 27);
             this.tbDescricao.TabIndex = 6;
             // 
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(450, 24);
+            this.label3.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(12, 108);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(55, 13);
+            this.label3.Size = new System.Drawing.Size(79, 19);
             this.label3.TabIndex = 5;
             this.label3.Text = "Descrição";
             // 
             // tbAno
             // 
-            this.tbAno.Location = new System.Drawing.Point(668, 21);
+            this.tbAno.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbAno.Location = new System.Drawing.Point(295, 58);
             this.tbAno.Name = "tbAno";
-            this.tbAno.Size = new System.Drawing.Size(100, 20);
+            this.tbAno.Size = new System.Drawing.Size(87, 27);
             this.tbAno.TabIndex = 8;
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(636, 24);
+            this.label4.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(252, 61);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(26, 13);
+            this.label4.Size = new System.Drawing.Size(37, 19);
             this.label4.TabIndex = 7;
             this.label4.Text = "Ano";
             // 
             // btLimpar
             // 
-            this.btLimpar.Location = new System.Drawing.Point(52, 63);
+            this.btLimpar.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.btLimpar.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.btLimpar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btLimpar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btLimpar.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
+            this.btLimpar.Location = new System.Drawing.Point(398, 21);
             this.btLimpar.Name = "btLimpar";
-            this.btLimpar.Size = new System.Drawing.Size(75, 23);
+            this.btLimpar.Size = new System.Drawing.Size(87, 64);
             this.btLimpar.TabIndex = 9;
             this.btLimpar.Text = "Limpar";
-            this.btLimpar.UseVisualStyleBackColor = true;
+            this.btLimpar.UseVisualStyleBackColor = false;
             this.btLimpar.Click += new System.EventHandler(this.btLimpar_Click);
             // 
             // btInserir
             // 
-            this.btInserir.Location = new System.Drawing.Point(152, 63);
+            this.btInserir.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.btInserir.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(128)))), ((int)(((byte)(255)))), ((int)(((byte)(128)))));
+            this.btInserir.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btInserir.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btInserir.Location = new System.Drawing.Point(491, 21);
             this.btInserir.Name = "btInserir";
-            this.btInserir.Size = new System.Drawing.Size(75, 23);
+            this.btInserir.Size = new System.Drawing.Size(87, 64);
             this.btInserir.TabIndex = 10;
             this.btInserir.Text = "Inserir";
-            this.btInserir.UseVisualStyleBackColor = true;
+            this.btInserir.UseVisualStyleBackColor = false;
             this.btInserir.Click += new System.EventHandler(this.btInserir_Click);
             // 
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(24, 24);
+            this.label5.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label5.Location = new System.Drawing.Point(12, 21);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(18, 13);
+            this.label5.Size = new System.Drawing.Size(24, 19);
             this.label5.TabIndex = 11;
             this.label5.Text = "ID";
             // 
             // tbID
             // 
             this.tbID.Enabled = false;
-            this.tbID.Location = new System.Drawing.Point(48, 21);
+            this.tbID.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.tbID.Location = new System.Drawing.Point(33, 18);
             this.tbID.Name = "tbID";
-            this.tbID.Size = new System.Drawing.Size(54, 20);
+            this.tbID.Size = new System.Drawing.Size(41, 27);
             this.tbID.TabIndex = 12;
             // 
             // btnAlterar
             // 
-            this.btnAlterar.Location = new System.Drawing.Point(248, 63);
+            this.btnAlterar.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.btnAlterar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(128)))));
+            this.btnAlterar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnAlterar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnAlterar.Location = new System.Drawing.Point(584, 21);
             this.btnAlterar.Name = "btnAlterar";
-            this.btnAlterar.Size = new System.Drawing.Size(75, 23);
+            this.btnAlterar.Size = new System.Drawing.Size(87, 64);
             this.btnAlterar.TabIndex = 13;
             this.btnAlterar.Text = "Alterar";
-            this.btnAlterar.UseVisualStyleBackColor = true;
+            this.btnAlterar.UseVisualStyleBackColor = false;
             this.btnAlterar.Click += new System.EventHandler(this.btnAlterar_Click);
             // 
             // btnDeletar
             // 
-            this.btnDeletar.Location = new System.Drawing.Point(341, 63);
+            this.btnDeletar.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
+            this.btnDeletar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(128)))));
+            this.btnDeletar.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.btnDeletar.Font = new System.Drawing.Font("Roboto", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnDeletar.Location = new System.Drawing.Point(677, 21);
             this.btnDeletar.Name = "btnDeletar";
-            this.btnDeletar.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletar.Size = new System.Drawing.Size(87, 64);
             this.btnDeletar.TabIndex = 14;
-            this.btnDeletar.Text = "Deletar";
-            this.btnDeletar.UseVisualStyleBackColor = true;
+            this.btnDeletar.Text = "Remover";
+            this.btnDeletar.UseVisualStyleBackColor = false;
             this.btnDeletar.Click += new System.EventHandler(this.btnDeletar_Click);
             // 
             // colID
             // 
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Roboto", 20F);
+            this.colID.DefaultCellStyle = dataGridViewCellStyle6;
             this.colID.HeaderText = "ID";
             this.colID.Name = "colID";
             this.colID.Width = 30;
             // 
             // colNome
             // 
+            dataGridViewCellStyle7.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colNome.DefaultCellStyle = dataGridViewCellStyle7;
             this.colNome.HeaderText = "Nome";
             this.colNome.Name = "colNome";
             this.colNome.Width = 150;
             // 
             // colCategoria
             // 
+            dataGridViewCellStyle8.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colCategoria.DefaultCellStyle = dataGridViewCellStyle8;
             this.colCategoria.HeaderText = "Categoria";
             this.colCategoria.Name = "colCategoria";
             // 
             // colDescricao
             // 
+            dataGridViewCellStyle9.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colDescricao.DefaultCellStyle = dataGridViewCellStyle9;
             this.colDescricao.HeaderText = "Descrição";
             this.colDescricao.Name = "colDescricao";
             this.colDescricao.Width = 350;
             // 
             // colAno
             // 
+            dataGridViewCellStyle10.Font = new System.Drawing.Font("Roboto", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.colAno.DefaultCellStyle = dataGridViewCellStyle10;
             this.colAno.HeaderText = "Ano";
             this.colAno.Name = "colAno";
             this.colAno.Width = 50;
             // 
             // FormLocadora
             // 
+            this.AccessibleRole = System.Windows.Forms.AccessibleRole.IpAddress;
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(192)))), ((int)(((byte)(255)))));
+            this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.ClientSize = new System.Drawing.Size(812, 456);
+            this.Controls.Add(this.dgLocadora);
             this.Controls.Add(this.btnDeletar);
             this.Controls.Add(this.btnAlterar);
             this.Controls.Add(this.tbID);
@@ -236,7 +284,6 @@ namespace NovaLocadora
             this.Controls.Add(this.label2);
             this.Controls.Add(this.tbNome);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dgLocadora);
             this.Name = "FormLocadora";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Locadora";

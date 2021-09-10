@@ -32,6 +32,7 @@ namespace NovaLocadora
         private void FormLocadora_Load(object sender, EventArgs e)
         {
             atualizaGrid();
+            dgLocadora.ColumnHeadersDefaultCellStyle.Font = new Font("Roboto", 10);
         }
 
         private void atualizaGrid()
@@ -71,6 +72,7 @@ namespace NovaLocadora
         private void btLimpar_Click(object sender, EventArgs e)
         {
             limparCampos();
+
         }
 
         private void limparCampos()
