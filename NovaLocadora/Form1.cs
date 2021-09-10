@@ -75,6 +75,7 @@ namespace NovaLocadora
 
         private void limparCampos()
         {
+            tbID.Clear();
             tbAno.Clear();
             tbNome.Clear();
             tbCategoria.Clear();
@@ -104,6 +105,75 @@ namespace NovaLocadora
             catch (Exception ex)
             {
                 Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnAlterar_Click(object sender, EventArgs e)
+        {
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
+            MySqlConnection realizaConexacoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
+                realizaConexacoBD.Open(); //Abre a conexão com o banco
+
+                MySqlCommand comandoMySql = realizaConexacoBD.CreateCommand(); //Crio um comando SQL
+                comandoMySql.CommandText = "UPDATE filme SET nomeFilme = '" + tbNome.Text + "', " +
+                    "descricaoFilme = '" + tbDescricao.Text + "', " +
+                    "categoriaFilme = '" + tbCategoria.Text + "', " +
+                    "anoFilme = " + Convert.ToInt16(tbAno.Text) +
+                    " WHERE idFilme = " + tbID.Text + "";
+                comandoMySql.ExecuteNonQuery();
+
+                realizaConexacoBD.Close(); // Fecho a conexão com o banco
+                MessageBox.Show("Atualizado com sucesso"); //Exibo mensagem de aviso
+                atualizaGrid();
+                limparCampos();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Não foi possivel abrir a conexão! ");
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void btnDeletar_Click(object sender, EventArgs e)
+        {
+            MySqlConnectionStringBuilder conexaoBD = conexaoBanco();
+            MySqlConnection realizaConexacoBD = new MySqlConnection(conexaoBD.ToString());
+            try
+            {
+                realizaConexacoBD.Open(); //Abre a conexão com o banco
+
+                MySqlCommand comandoMySql = realizaConexacoBD.CreateCommand(); //Crio um comando SQL
+                // "DELETE FROM filme WHERE idFilme = "+ textBoxId.Text +""
+                //comandoMySql.CommandText = "DELETE FROM filme WHERE idFilme = " + tbID.Text + "";
+                comandoMySql.CommandText = "UPDATE filme SET ativoFilme = 0 WHERE idFilme = " + tbID.Text + "";
+
+                comandoMySql.ExecuteNonQuery();
+
+                realizaConexacoBD.Close(); // Fecho a conexão com o banco
+                MessageBox.Show("Deletado com sucesso"); //Exibo mensagem de aviso
+                atualizaGrid();
+                limparCampos();
+            }
+            catch (Exception ex)
+            {
+                //MessageBox.Show("Não foi possivel abrir a conexão! ");
+                Console.WriteLine(ex.Message);
+            }
+        }
+
+        private void dgLocadora_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+            if (dgLocadora.Rows[e.RowIndex].Cells[e.ColumnIndex].Value != null)
+            {
+                dgLocadora.CurrentRow.Selected = true;
+                //preenche os textbox com as células da linha selecionada
+                tbNome.Text = dgLocadora.Rows[e.RowIndex].Cells["colNome"].FormattedValue.ToString();
+                tbCategoria.Text = dgLocadora.Rows[e.RowIndex].Cells["colCategoria"].FormattedValue.ToString();
+                tbDescricao.Text = dgLocadora.Rows[e.RowIndex].Cells["colDescricao"].FormattedValue.ToString();
+                tbAno.Text = dgLocadora.Rows[e.RowIndex].Cells["colAno"].FormattedValue.ToString();
+                tbID.Text = dgLocadora.Rows[e.RowIndex].Cells["colID"].FormattedValue.ToString();
             }
         }
     }
